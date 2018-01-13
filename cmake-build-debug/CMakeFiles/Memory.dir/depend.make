@@ -30,7 +30,6 @@ CMakeFiles/Memory.dir/linklistException.cpp.o: ../linklistException.h
 
 CMakeFiles/Memory.dir/main.cpp.o: ../LinkedList.h
 CMakeFiles/Memory.dir/main.cpp.o: ../MemPool.h
-CMakeFiles/Memory.dir/main.cpp.o: ../MemoryManager.h
 CMakeFiles/Memory.dir/main.cpp.o: ../MyException.h
 CMakeFiles/Memory.dir/main.cpp.o: ../argumentException.h
 CMakeFiles/Memory.dir/main.cpp.o: ../linklistException.h

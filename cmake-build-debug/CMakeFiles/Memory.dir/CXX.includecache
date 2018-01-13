@@ -73,10 +73,10 @@ iostream
 -
 LinkedList.h
 /home/eliran/Desktop/CPP/Memory/LinkedList.h
-MemoryManager.h
-/home/eliran/Desktop/CPP/Memory/MemoryManager.h
 argumentException.h
 /home/eliran/Desktop/CPP/Memory/argumentException.h
+MemPool.h
+/home/eliran/Desktop/CPP/Memory/MemPool.h
 
 /home/eliran/Desktop/CPP/Memory/mempoolException.cpp
 mempoolException.h
