@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Memory.dir/main.cpp.o CMakeFiles/Memory.dir/LinkedList.cpp.o CMakeFiles/Memory.dir/MemPool.cpp.o CMakeFiles/Memory.dir/MemoryManager.cpp.o  -o Memory 
