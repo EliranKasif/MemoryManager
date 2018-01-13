@@ -7,6 +7,7 @@
 
 
 #include <ostream>
+#include "linklistException.h"
 
 class LinkedList {
 private:
@@ -19,8 +20,9 @@ private:
 
 public:
     LinkedList();
-    void add(void* _data);
-    bool remove();
+    void add(void* _data) throw (linklistException);
+    bool remove() throw (linklistException);
+    bool checkifin(char index);
     Node *getHead() const;
     void toString(std::ostream &os) const;
     friend std::ostream &operator<<(std::ostream &os, const LinkedList &list);

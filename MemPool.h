@@ -10,20 +10,19 @@
 class MemPool {
 
 public:
-//    static MemPool* getInstance(size_t bytes);
-    MemPool(std::size_t bytes);
+    static MemPool* getInstance(size_t bytes = 0);
+    static void deleteInstance();
     void movebrk(const int index);
     void* getCurrentbrk() const;
-    char *getPool() const;
     void *getLastbytes() const;
+
     ~MemPool();
 
 private:
-    const std::size_t bytes;
     void* lastbytes;
     char* pool;
     void* currentbrk;
-   // static MemPool* Mypool;
+    static MemPool* Mypool;
 
 };
 

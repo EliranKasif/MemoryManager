@@ -204,6 +204,87 @@ MemoryManager.cpp.s:
 	$(MAKE) -f CMakeFiles/Memory.dir/build.make CMakeFiles/Memory.dir/MemoryManager.cpp.s
 .PHONY : MemoryManager.cpp.s
 
+MyException.o: MyException.cpp.o
+
+.PHONY : MyException.o
+
+# target to build an object file
+MyException.cpp.o:
+	$(MAKE) -f CMakeFiles/Memory.dir/build.make CMakeFiles/Memory.dir/MyException.cpp.o
+.PHONY : MyException.cpp.o
+
+MyException.i: MyException.cpp.i
+
+.PHONY : MyException.i
+
+# target to preprocess a source file
+MyException.cpp.i:
+	$(MAKE) -f CMakeFiles/Memory.dir/build.make CMakeFiles/Memory.dir/MyException.cpp.i
+.PHONY : MyException.cpp.i
+
+MyException.s: MyException.cpp.s
+
+.PHONY : MyException.s
+
+# target to generate assembly for a file
+MyException.cpp.s:
+	$(MAKE) -f CMakeFiles/Memory.dir/build.make CMakeFiles/Memory.dir/MyException.cpp.s
+.PHONY : MyException.cpp.s
+
+argumentException.o: argumentException.cpp.o
+
+.PHONY : argumentException.o
+
+# target to build an object file
+argumentException.cpp.o:
+	$(MAKE) -f CMakeFiles/Memory.dir/build.make CMakeFiles/Memory.dir/argumentException.cpp.o
+.PHONY : argumentException.cpp.o
+
+argumentException.i: argumentException.cpp.i
+
+.PHONY : argumentException.i
+
+# target to preprocess a source file
+argumentException.cpp.i:
+	$(MAKE) -f CMakeFiles/Memory.dir/build.make CMakeFiles/Memory.dir/argumentException.cpp.i
+.PHONY : argumentException.cpp.i
+
+argumentException.s: argumentException.cpp.s
+
+.PHONY : argumentException.s
+
+# target to generate assembly for a file
+argumentException.cpp.s:
+	$(MAKE) -f CMakeFiles/Memory.dir/build.make CMakeFiles/Memory.dir/argumentException.cpp.s
+.PHONY : argumentException.cpp.s
+
+linklistException.o: linklistException.cpp.o
+
+.PHONY : linklistException.o
+
+# target to build an object file
+linklistException.cpp.o:
+	$(MAKE) -f CMakeFiles/Memory.dir/build.make CMakeFiles/Memory.dir/linklistException.cpp.o
+.PHONY : linklistException.cpp.o
+
+linklistException.i: linklistException.cpp.i
+
+.PHONY : linklistException.i
+
+# target to preprocess a source file
+linklistException.cpp.i:
+	$(MAKE) -f CMakeFiles/Memory.dir/build.make CMakeFiles/Memory.dir/linklistException.cpp.i
+.PHONY : linklistException.cpp.i
+
+linklistException.s: linklistException.cpp.s
+
+.PHONY : linklistException.s
+
+# target to generate assembly for a file
+linklistException.cpp.s:
+	$(MAKE) -f CMakeFiles/Memory.dir/build.make CMakeFiles/Memory.dir/linklistException.cpp.s
+.PHONY : linklistException.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -231,6 +312,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Memory.dir/build.make CMakeFiles/Memory.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+mempoolException.o: mempoolException.cpp.o
+
+.PHONY : mempoolException.o
+
+# target to build an object file
+mempoolException.cpp.o:
+	$(MAKE) -f CMakeFiles/Memory.dir/build.make CMakeFiles/Memory.dir/mempoolException.cpp.o
+.PHONY : mempoolException.cpp.o
+
+mempoolException.i: mempoolException.cpp.i
+
+.PHONY : mempoolException.i
+
+# target to preprocess a source file
+mempoolException.cpp.i:
+	$(MAKE) -f CMakeFiles/Memory.dir/build.make CMakeFiles/Memory.dir/mempoolException.cpp.i
+.PHONY : mempoolException.cpp.i
+
+mempoolException.s: mempoolException.cpp.s
+
+.PHONY : mempoolException.s
+
+# target to generate assembly for a file
+mempoolException.cpp.s:
+	$(MAKE) -f CMakeFiles/Memory.dir/build.make CMakeFiles/Memory.dir/mempoolException.cpp.s
+.PHONY : mempoolException.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -249,9 +357,21 @@ help:
 	@echo "... MemoryManager.o"
 	@echo "... MemoryManager.i"
 	@echo "... MemoryManager.s"
+	@echo "... MyException.o"
+	@echo "... MyException.i"
+	@echo "... MyException.s"
+	@echo "... argumentException.o"
+	@echo "... argumentException.i"
+	@echo "... argumentException.s"
+	@echo "... linklistException.o"
+	@echo "... linklistException.i"
+	@echo "... linklistException.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... mempoolException.o"
+	@echo "... mempoolException.i"
+	@echo "... mempoolException.s"
 .PHONY : help
 
 

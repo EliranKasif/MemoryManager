@@ -3,6 +3,8 @@
 
 CMakeFiles/Memory.dir/LinkedList.cpp.o: ../LinkedList.cpp
 CMakeFiles/Memory.dir/LinkedList.cpp.o: ../LinkedList.h
+CMakeFiles/Memory.dir/LinkedList.cpp.o: ../MyException.h
+CMakeFiles/Memory.dir/LinkedList.cpp.o: ../linklistException.h
 
 CMakeFiles/Memory.dir/MemPool.cpp.o: ../MemPool.cpp
 CMakeFiles/Memory.dir/MemPool.cpp.o: ../MemPool.h
@@ -11,9 +13,30 @@ CMakeFiles/Memory.dir/MemoryManager.cpp.o: ../LinkedList.h
 CMakeFiles/Memory.dir/MemoryManager.cpp.o: ../MemPool.h
 CMakeFiles/Memory.dir/MemoryManager.cpp.o: ../MemoryManager.cpp
 CMakeFiles/Memory.dir/MemoryManager.cpp.o: ../MemoryManager.h
+CMakeFiles/Memory.dir/MemoryManager.cpp.o: ../MyException.h
+CMakeFiles/Memory.dir/MemoryManager.cpp.o: ../linklistException.h
+CMakeFiles/Memory.dir/MemoryManager.cpp.o: ../mempoolException.h
+
+CMakeFiles/Memory.dir/MyException.cpp.o: ../MyException.cpp
+CMakeFiles/Memory.dir/MyException.cpp.o: ../MyException.h
+
+CMakeFiles/Memory.dir/argumentException.cpp.o: ../MyException.h
+CMakeFiles/Memory.dir/argumentException.cpp.o: ../argumentException.cpp
+CMakeFiles/Memory.dir/argumentException.cpp.o: ../argumentException.h
+
+CMakeFiles/Memory.dir/linklistException.cpp.o: ../MyException.h
+CMakeFiles/Memory.dir/linklistException.cpp.o: ../linklistException.cpp
+CMakeFiles/Memory.dir/linklistException.cpp.o: ../linklistException.h
 
 CMakeFiles/Memory.dir/main.cpp.o: ../LinkedList.h
 CMakeFiles/Memory.dir/main.cpp.o: ../MemPool.h
 CMakeFiles/Memory.dir/main.cpp.o: ../MemoryManager.h
+CMakeFiles/Memory.dir/main.cpp.o: ../MyException.h
+CMakeFiles/Memory.dir/main.cpp.o: ../argumentException.h
+CMakeFiles/Memory.dir/main.cpp.o: ../linklistException.h
 CMakeFiles/Memory.dir/main.cpp.o: ../main.cpp
+
+CMakeFiles/Memory.dir/mempoolException.cpp.o: ../MyException.h
+CMakeFiles/Memory.dir/mempoolException.cpp.o: ../mempoolException.cpp
+CMakeFiles/Memory.dir/mempoolException.cpp.o: ../mempoolException.h
 

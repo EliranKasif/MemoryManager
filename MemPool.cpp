@@ -5,14 +5,18 @@
 #include <cstdlib>
 #include "MemPool.h"
 
+MemPool* MemPool:: Mypool= nullptr;
 
-
-MemPool::MemPool(size_t _bytes):bytes(_bytes){
-    pool=(char*)malloc(_bytes);
-    currentbrk=pool;
-    lastbytes=&pool[_bytes];
+ MemPool* MemPool:: getInstance(size_t bytes ){
+     if(!Mypool){
+         Mypool=(MemPool*)malloc(sizeof(MemPool)+bytes);
+         Mypool->pool=(char*)malloc(bytes);
+         Mypool->currentbrk= Mypool->pool;
+         Mypool->lastbytes=&(Mypool->pool[bytes]);
+         return Mypool;
+     }
+     return Mypool;
 }
-
 void MemPool::movebrk(const int index){
     currentbrk += index;
 }
@@ -21,15 +25,14 @@ void MemPool::movebrk(const int index){
 void* MemPool::getCurrentbrk() const {
     return currentbrk;
 }
-
-char *MemPool::getPool() const {
-    return pool;
-}
-
 void *MemPool::getLastbytes() const {
     return lastbytes;
 }
 
-MemPool::~MemPool(){
-    free(pool);
+void MemPool::deleteInstance(){
+    free(Mypool->pool);
+    free(Mypool);
 }
+MemPool::~MemPool(){
+}
+

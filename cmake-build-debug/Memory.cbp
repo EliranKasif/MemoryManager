@@ -102,7 +102,31 @@
 		<Unit filename="/home/eliran/Desktop/CPP/Memory/MemoryManager.h">
 			<Option target="Memory"/>
 		</Unit>
+		<Unit filename="/home/eliran/Desktop/CPP/Memory/MyException.cpp">
+			<Option target="Memory"/>
+		</Unit>
+		<Unit filename="/home/eliran/Desktop/CPP/Memory/MyException.h">
+			<Option target="Memory"/>
+		</Unit>
+		<Unit filename="/home/eliran/Desktop/CPP/Memory/argumentException.cpp">
+			<Option target="Memory"/>
+		</Unit>
+		<Unit filename="/home/eliran/Desktop/CPP/Memory/argumentException.h">
+			<Option target="Memory"/>
+		</Unit>
+		<Unit filename="/home/eliran/Desktop/CPP/Memory/linklistException.cpp">
+			<Option target="Memory"/>
+		</Unit>
+		<Unit filename="/home/eliran/Desktop/CPP/Memory/linklistException.h">
+			<Option target="Memory"/>
+		</Unit>
 		<Unit filename="/home/eliran/Desktop/CPP/Memory/main.cpp">
+			<Option target="Memory"/>
+		</Unit>
+		<Unit filename="/home/eliran/Desktop/CPP/Memory/mempoolException.cpp">
+			<Option target="Memory"/>
+		</Unit>
+		<Unit filename="/home/eliran/Desktop/CPP/Memory/mempoolException.h">
 			<Option target="Memory"/>
 		</Unit>
 		<Unit filename="/home/eliran/Desktop/CPP/Memory/CMakeLists.txt">

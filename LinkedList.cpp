@@ -9,7 +9,7 @@
 LinkedList::LinkedList():head(nullptr){}
 
 
-void LinkedList::add(void* _data){
+void LinkedList::add(void* _data) throw (linklistException){
     try {
         if (!head) { //the list is empty
             Node *temp = new Node();
@@ -23,26 +23,48 @@ void LinkedList::add(void* _data){
 
         }
     }
-    catch (std::bad_alloc){
-        std::cerr<<"No more space in the pool!!!"<<std::endl;
-        exit(1);
+    catch (const MyException& e){
+        throw linklistException();
     }
 
 
 
 }
 
-bool LinkedList::remove(){
+bool LinkedList::remove() throw (linklistException){
     if(!head){ //the list is empty
         return false;
     }
     else{ // the list is not empty
         Node* temp=head;
         head = head->next;
-        delete temp;
+        try {
+            delete temp;
+        }
+        catch(const MyException& e){
+            throw linklistException();
+        }
         return true;
     }
 }
+
+bool LinkedList::checkifin(char index){
+    bool ans=false;
+    Node* temp=head;
+    while(temp){
+        char* size=(char*)(temp->data - sizeof(char));//to obttain the real allocate num
+        if(*size==index){//swap between head data to temo data.
+            void* data=head->data;
+            head->data=temp->data;
+            temp->data=data;
+            ans=true;
+            return ans;
+        }
+        temp=temp->next;
+    }
+    return ans;
+}
+
 LinkedList::Node *LinkedList::getHead() const {
     return head;
 }

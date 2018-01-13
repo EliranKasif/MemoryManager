@@ -153,12 +153,112 @@ CMakeFiles/Memory.dir/MemoryManager.cpp.o.provides: CMakeFiles/Memory.dir/Memory
 CMakeFiles/Memory.dir/MemoryManager.cpp.o.provides.build: CMakeFiles/Memory.dir/MemoryManager.cpp.o
 
 
+CMakeFiles/Memory.dir/MyException.cpp.o: CMakeFiles/Memory.dir/flags.make
+CMakeFiles/Memory.dir/MyException.cpp.o: ../MyException.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eliran/Desktop/CPP/Memory/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Memory.dir/MyException.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Memory.dir/MyException.cpp.o -c /home/eliran/Desktop/CPP/Memory/MyException.cpp
+
+CMakeFiles/Memory.dir/MyException.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Memory.dir/MyException.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/eliran/Desktop/CPP/Memory/MyException.cpp > CMakeFiles/Memory.dir/MyException.cpp.i
+
+CMakeFiles/Memory.dir/MyException.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Memory.dir/MyException.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eliran/Desktop/CPP/Memory/MyException.cpp -o CMakeFiles/Memory.dir/MyException.cpp.s
+
+CMakeFiles/Memory.dir/MyException.cpp.o.requires:
+
+.PHONY : CMakeFiles/Memory.dir/MyException.cpp.o.requires
+
+CMakeFiles/Memory.dir/MyException.cpp.o.provides: CMakeFiles/Memory.dir/MyException.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Memory.dir/build.make CMakeFiles/Memory.dir/MyException.cpp.o.provides.build
+.PHONY : CMakeFiles/Memory.dir/MyException.cpp.o.provides
+
+CMakeFiles/Memory.dir/MyException.cpp.o.provides.build: CMakeFiles/Memory.dir/MyException.cpp.o
+
+
+CMakeFiles/Memory.dir/argumentException.cpp.o: CMakeFiles/Memory.dir/flags.make
+CMakeFiles/Memory.dir/argumentException.cpp.o: ../argumentException.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eliran/Desktop/CPP/Memory/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Memory.dir/argumentException.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Memory.dir/argumentException.cpp.o -c /home/eliran/Desktop/CPP/Memory/argumentException.cpp
+
+CMakeFiles/Memory.dir/argumentException.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Memory.dir/argumentException.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/eliran/Desktop/CPP/Memory/argumentException.cpp > CMakeFiles/Memory.dir/argumentException.cpp.i
+
+CMakeFiles/Memory.dir/argumentException.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Memory.dir/argumentException.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eliran/Desktop/CPP/Memory/argumentException.cpp -o CMakeFiles/Memory.dir/argumentException.cpp.s
+
+CMakeFiles/Memory.dir/argumentException.cpp.o.requires:
+
+.PHONY : CMakeFiles/Memory.dir/argumentException.cpp.o.requires
+
+CMakeFiles/Memory.dir/argumentException.cpp.o.provides: CMakeFiles/Memory.dir/argumentException.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Memory.dir/build.make CMakeFiles/Memory.dir/argumentException.cpp.o.provides.build
+.PHONY : CMakeFiles/Memory.dir/argumentException.cpp.o.provides
+
+CMakeFiles/Memory.dir/argumentException.cpp.o.provides.build: CMakeFiles/Memory.dir/argumentException.cpp.o
+
+
+CMakeFiles/Memory.dir/mempoolException.cpp.o: CMakeFiles/Memory.dir/flags.make
+CMakeFiles/Memory.dir/mempoolException.cpp.o: ../mempoolException.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eliran/Desktop/CPP/Memory/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Memory.dir/mempoolException.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Memory.dir/mempoolException.cpp.o -c /home/eliran/Desktop/CPP/Memory/mempoolException.cpp
+
+CMakeFiles/Memory.dir/mempoolException.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Memory.dir/mempoolException.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/eliran/Desktop/CPP/Memory/mempoolException.cpp > CMakeFiles/Memory.dir/mempoolException.cpp.i
+
+CMakeFiles/Memory.dir/mempoolException.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Memory.dir/mempoolException.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eliran/Desktop/CPP/Memory/mempoolException.cpp -o CMakeFiles/Memory.dir/mempoolException.cpp.s
+
+CMakeFiles/Memory.dir/mempoolException.cpp.o.requires:
+
+.PHONY : CMakeFiles/Memory.dir/mempoolException.cpp.o.requires
+
+CMakeFiles/Memory.dir/mempoolException.cpp.o.provides: CMakeFiles/Memory.dir/mempoolException.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Memory.dir/build.make CMakeFiles/Memory.dir/mempoolException.cpp.o.provides.build
+.PHONY : CMakeFiles/Memory.dir/mempoolException.cpp.o.provides
+
+CMakeFiles/Memory.dir/mempoolException.cpp.o.provides.build: CMakeFiles/Memory.dir/mempoolException.cpp.o
+
+
+CMakeFiles/Memory.dir/linklistException.cpp.o: CMakeFiles/Memory.dir/flags.make
+CMakeFiles/Memory.dir/linklistException.cpp.o: ../linklistException.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eliran/Desktop/CPP/Memory/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Memory.dir/linklistException.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Memory.dir/linklistException.cpp.o -c /home/eliran/Desktop/CPP/Memory/linklistException.cpp
+
+CMakeFiles/Memory.dir/linklistException.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Memory.dir/linklistException.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/eliran/Desktop/CPP/Memory/linklistException.cpp > CMakeFiles/Memory.dir/linklistException.cpp.i
+
+CMakeFiles/Memory.dir/linklistException.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Memory.dir/linklistException.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eliran/Desktop/CPP/Memory/linklistException.cpp -o CMakeFiles/Memory.dir/linklistException.cpp.s
+
+CMakeFiles/Memory.dir/linklistException.cpp.o.requires:
+
+.PHONY : CMakeFiles/Memory.dir/linklistException.cpp.o.requires
+
+CMakeFiles/Memory.dir/linklistException.cpp.o.provides: CMakeFiles/Memory.dir/linklistException.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Memory.dir/build.make CMakeFiles/Memory.dir/linklistException.cpp.o.provides.build
+.PHONY : CMakeFiles/Memory.dir/linklistException.cpp.o.provides
+
+CMakeFiles/Memory.dir/linklistException.cpp.o.provides.build: CMakeFiles/Memory.dir/linklistException.cpp.o
+
+
 # Object files for target Memory
 Memory_OBJECTS = \
 "CMakeFiles/Memory.dir/main.cpp.o" \
 "CMakeFiles/Memory.dir/LinkedList.cpp.o" \
 "CMakeFiles/Memory.dir/MemPool.cpp.o" \
-"CMakeFiles/Memory.dir/MemoryManager.cpp.o"
+"CMakeFiles/Memory.dir/MemoryManager.cpp.o" \
+"CMakeFiles/Memory.dir/MyException.cpp.o" \
+"CMakeFiles/Memory.dir/argumentException.cpp.o" \
+"CMakeFiles/Memory.dir/mempoolException.cpp.o" \
+"CMakeFiles/Memory.dir/linklistException.cpp.o"
 
 # External object files for target Memory
 Memory_EXTERNAL_OBJECTS =
@@ -167,9 +267,13 @@ Memory: CMakeFiles/Memory.dir/main.cpp.o
 Memory: CMakeFiles/Memory.dir/LinkedList.cpp.o
 Memory: CMakeFiles/Memory.dir/MemPool.cpp.o
 Memory: CMakeFiles/Memory.dir/MemoryManager.cpp.o
+Memory: CMakeFiles/Memory.dir/MyException.cpp.o
+Memory: CMakeFiles/Memory.dir/argumentException.cpp.o
+Memory: CMakeFiles/Memory.dir/mempoolException.cpp.o
+Memory: CMakeFiles/Memory.dir/linklistException.cpp.o
 Memory: CMakeFiles/Memory.dir/build.make
 Memory: CMakeFiles/Memory.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/eliran/Desktop/CPP/Memory/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Memory"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/eliran/Desktop/CPP/Memory/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Memory"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Memory.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -181,6 +285,10 @@ CMakeFiles/Memory.dir/requires: CMakeFiles/Memory.dir/main.cpp.o.requires
 CMakeFiles/Memory.dir/requires: CMakeFiles/Memory.dir/LinkedList.cpp.o.requires
 CMakeFiles/Memory.dir/requires: CMakeFiles/Memory.dir/MemPool.cpp.o.requires
 CMakeFiles/Memory.dir/requires: CMakeFiles/Memory.dir/MemoryManager.cpp.o.requires
+CMakeFiles/Memory.dir/requires: CMakeFiles/Memory.dir/MyException.cpp.o.requires
+CMakeFiles/Memory.dir/requires: CMakeFiles/Memory.dir/argumentException.cpp.o.requires
+CMakeFiles/Memory.dir/requires: CMakeFiles/Memory.dir/mempoolException.cpp.o.requires
+CMakeFiles/Memory.dir/requires: CMakeFiles/Memory.dir/linklistException.cpp.o.requires
 
 .PHONY : CMakeFiles/Memory.dir/requires
 

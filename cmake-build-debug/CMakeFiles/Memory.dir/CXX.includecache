@@ -15,6 +15,8 @@ LinkedList.h
 /home/eliran/Desktop/CPP/Memory/LinkedList.h
 ostream
 -
+linklistException.h
+/home/eliran/Desktop/CPP/Memory/linklistException.h
 
 /home/eliran/Desktop/CPP/Memory/MemPool.cpp
 cstdlib
@@ -33,12 +35,38 @@ complex
 -
 MemoryManager.h
 /home/eliran/Desktop/CPP/Memory/MemoryManager.h
+mempoolException.h
+/home/eliran/Desktop/CPP/Memory/mempoolException.h
 
 /home/eliran/Desktop/CPP/Memory/MemoryManager.h
 MemPool.h
 /home/eliran/Desktop/CPP/Memory/MemPool.h
 LinkedList.h
 /home/eliran/Desktop/CPP/Memory/LinkedList.h
+
+/home/eliran/Desktop/CPP/Memory/MyException.cpp
+MyException.h
+/home/eliran/Desktop/CPP/Memory/MyException.h
+
+/home/eliran/Desktop/CPP/Memory/MyException.h
+exception
+-
+
+/home/eliran/Desktop/CPP/Memory/argumentException.cpp
+argumentException.h
+/home/eliran/Desktop/CPP/Memory/argumentException.h
+
+/home/eliran/Desktop/CPP/Memory/argumentException.h
+MyException.h
+/home/eliran/Desktop/CPP/Memory/MyException.h
+
+/home/eliran/Desktop/CPP/Memory/linklistException.cpp
+linklistException.h
+/home/eliran/Desktop/CPP/Memory/linklistException.h
+
+/home/eliran/Desktop/CPP/Memory/linklistException.h
+MyException.h
+/home/eliran/Desktop/CPP/Memory/MyException.h
 
 /home/eliran/Desktop/CPP/Memory/main.cpp
 iostream
@@ -47,4 +75,14 @@ LinkedList.h
 /home/eliran/Desktop/CPP/Memory/LinkedList.h
 MemoryManager.h
 /home/eliran/Desktop/CPP/Memory/MemoryManager.h
+argumentException.h
+/home/eliran/Desktop/CPP/Memory/argumentException.h
+
+/home/eliran/Desktop/CPP/Memory/mempoolException.cpp
+mempoolException.h
+/home/eliran/Desktop/CPP/Memory/mempoolException.h
+
+/home/eliran/Desktop/CPP/Memory/mempoolException.h
+MyException.h
+/home/eliran/Desktop/CPP/Memory/MyException.h
 

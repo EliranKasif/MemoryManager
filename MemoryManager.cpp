@@ -6,33 +6,46 @@
 #include <iostream>
 #include <complex>
 #include "MemoryManager.h"
+#include "mempoolException.h"
 
 
-MemPool MemoryManager::memPool(1025);
 LinkedList MemoryManager::freelist[9];//max is 2^9=512 bytes... every request more then 512 will enter in freelist[9]
 
-void * operator new (std::size_t n)throw(std::bad_alloc){
+void * operator new (std::size_t n)throw(mempoolException){
     void* ans=MemoryManager::newPlacment(n);
     if(!ans){
-        throw std::bad_alloc();
+        throw mempoolException();
     }
     return ans;
 }
 
 void operator delete (void* n){
-    MemoryManager::deletePlacment(n);
+    try {
+        MemoryManager::deletePlacment(n);
+    }
+    catch (const MyException& e){
+        std::cerr<<e.what()<<std::endl;
+        exit(1);
+    }
+
 }
 
-void * operator new[] (std::size_t n)throw(std::bad_alloc){
+void * operator new[] (std::size_t n)throw(mempoolException){
     void* ans=MemoryManager::newPlacment(n);
     if(!ans){
-        throw std::bad_alloc();
+        throw mempoolException();
     }
     return ans;
 }
 
 void operator delete[] (void* n){
-    MemoryManager::deletePlacment(n);
+    try {
+        MemoryManager::deletePlacment(n);
+    }
+    catch (const MyException& e){
+        std::cerr<<e.what()<<std::endl;
+        exit(1);
+    }
 }
 
 void* MemoryManager:: newPlacment(std::size_t n){
@@ -47,21 +60,21 @@ void* MemoryManager:: newPlacment(std::size_t n){
         index=9;
         above512=true;
     }
-    if(check_if_in_freelist(index)){
+    if(check_if_in_freelist(above512 ? index2 : index)){
         void* temp=freelist[index].getHead()->data; //get the address to new placemnt
         char* size=(char*)temp-sizeof(char); //get the address to the num of bytes to alocated
-        *size=index; //change the number of bytes to allocated
+        *size=above512 ? index2 : index; //change the number of bytes to allocated
         ans=temp;
         freelist[index].remove();
         return ans;
 
     }
     else if(check_if_place_pool((int)std::pow(2,above512 ? index2 : index)+sizeof(char))){
-        ans=memPool.getCurrentbrk();
+        ans=MemPool::getInstance()->getCurrentbrk();
         char* size=(char*)ans;
-        *size=index;//emplace the num of bytes to alocated
+        *size=above512 ? index2 : index;//emplace the num of bytes to alocated
         ans+=sizeof(char);//move the address to the next byte to alocate
-        memPool.movebrk((int)std::pow(2,above512 ? index2 : index)+sizeof(char));
+        MemPool::getInstance()->movebrk((int)std::pow(2,above512 ? index2 : index)+sizeof(char));
         return ans;
     }
     else
@@ -72,18 +85,32 @@ void* MemoryManager:: newPlacment(std::size_t n){
 }
 
 
-bool MemoryManager::check_if_in_freelist(int index){
+bool MemoryManager::check_if_in_freelist(char index){
+    if(index>9){
+        return freelist[9].checkifin(index);
+    }
     return (bool)freelist[index].getHead();
 
 }
 bool MemoryManager::check_if_place_pool(const int index){
-    if(memPool.getCurrentbrk()+index <= memPool.getLastbytes())
+    if(MemPool::getInstance()->getCurrentbrk()+index <= MemPool::getInstance()->getLastbytes())
         return true;
     return false;
 
 }
 
-void MemoryManager::deletePlacment(void* n){
+void MemoryManager::deletePlacment(void* n) throw (linklistException){
     char* size=(char*) (n - sizeof(char));
-    freelist[*size].add(n);
+    char index=*size;
+    if(*size>9)
+    {
+        index=9;
+    }
+    try {
+        freelist[index].add(n);
+    }
+    catch (const MyException& e)
+    {
+        throw linklistException();
+    }
 }
