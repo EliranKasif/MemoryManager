@@ -30,8 +30,10 @@ void *MemPool::getLastbytes() const {
 }
 
 void MemPool::deleteInstance(){
-    free(Mypool->pool);
-    free(Mypool);
+    if(Mypool) {
+        free(Mypool->pool);
+        free(Mypool);
+    }
 }
 MemPool::~MemPool(){
 }

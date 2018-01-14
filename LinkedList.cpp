@@ -48,7 +48,7 @@ bool LinkedList::remove() throw (linklistException){
     }
 }
 
-bool LinkedList::checkifin(char index){
+bool LinkedList::checkifin(char index){ // O(n) n=length of LinkedList
     bool ans=false;
     Node* temp=head;
     while(temp){
