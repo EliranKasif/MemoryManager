@@ -11,6 +11,7 @@
 
 class MemoryManager{
 public:
+    int static valgrind;
     /*
     * @brief newPlacment check first if there is room in the freelist and return Node.data addrress,
      * otherwise take from the Mempool if can.
@@ -40,6 +41,4 @@ private:
     */
     static bool check_if_place_pool(const int size);
 };
-
-
 #endif // MEMORY_MEMORYFROMMEMPOOL_H

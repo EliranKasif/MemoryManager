@@ -231,33 +231,6 @@ MyException.cpp.s:
 	$(MAKE) -f CMakeFiles/Memory.dir/build.make CMakeFiles/Memory.dir/MyException.cpp.s
 .PHONY : MyException.cpp.s
 
-Valgrind.o: Valgrind.cpp.o
-
-.PHONY : Valgrind.o
-
-# target to build an object file
-Valgrind.cpp.o:
-	$(MAKE) -f CMakeFiles/Memory.dir/build.make CMakeFiles/Memory.dir/Valgrind.cpp.o
-.PHONY : Valgrind.cpp.o
-
-Valgrind.i: Valgrind.cpp.i
-
-.PHONY : Valgrind.i
-
-# target to preprocess a source file
-Valgrind.cpp.i:
-	$(MAKE) -f CMakeFiles/Memory.dir/build.make CMakeFiles/Memory.dir/Valgrind.cpp.i
-.PHONY : Valgrind.cpp.i
-
-Valgrind.s: Valgrind.cpp.s
-
-.PHONY : Valgrind.s
-
-# target to generate assembly for a file
-Valgrind.cpp.s:
-	$(MAKE) -f CMakeFiles/Memory.dir/build.make CMakeFiles/Memory.dir/Valgrind.cpp.s
-.PHONY : Valgrind.cpp.s
-
 argumentException.o: argumentException.cpp.o
 
 .PHONY : argumentException.o
@@ -387,9 +360,6 @@ help:
 	@echo "... MyException.o"
 	@echo "... MyException.i"
 	@echo "... MyException.s"
-	@echo "... Valgrind.o"
-	@echo "... Valgrind.i"
-	@echo "... Valgrind.s"
 	@echo "... argumentException.o"
 	@echo "... argumentException.i"
 	@echo "... argumentException.s"

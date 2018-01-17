@@ -11,6 +11,8 @@ iostream
 -
 LinkedList.h
 /home/eliran/Desktop/CPP/Memory/LinkedList.h
+MemPool.h
+/home/eliran/Desktop/CPP/Memory/MemPool.h
 
 /home/eliran/Desktop/CPP/Memory/LinkedList.h
 ostream
@@ -77,6 +79,8 @@ argumentException.h
 /home/eliran/Desktop/CPP/Memory/argumentException.h
 MemPool.h
 /home/eliran/Desktop/CPP/Memory/MemPool.h
+MemoryManager.h
+/home/eliran/Desktop/CPP/Memory/MemoryManager.h
 
 /home/eliran/Desktop/CPP/Memory/mempoolException.cpp
 mempoolException.h

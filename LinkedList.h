@@ -15,17 +15,20 @@ private:
         Node():data(0),next(nullptr){}
         void* data;
         Node* next;
+        ~Node()= default;
     };
     Node* head;
 
 public:
     LinkedList();
+    ~LinkedList()=default;
     /*
     * @brief add new address to the Linkedlist
      * throw exception when new is faild.
     * @return void
     */
-    void add(void* _data) throw (linklistException);
+    void add(void* _data,void* _location);
+
     /*
     * @brief remove head of the LinkedList
     * throw exception when delete is faild.
@@ -53,6 +56,8 @@ public:
     * @return ostream
     */
     friend std::ostream &operator<<(std::ostream &os, const LinkedList &list);
+
+    void setHead(void *head);
 };
 
 

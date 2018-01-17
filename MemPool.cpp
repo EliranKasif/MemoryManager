@@ -38,3 +38,7 @@ void MemPool::deleteInstance(){
 MemPool::~MemPool(){
 }
 
+char *MemPool::getPool() const {
+    return pool;
+}
+

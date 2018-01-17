@@ -4,46 +4,25 @@
 
 #include <iostream>
 #include "LinkedList.h"
+#include "MemPool.h"
 
 
 LinkedList::LinkedList():head(nullptr){}
 
-
-void LinkedList::add(void* _data) throw (linklistException){
-    try {
-        if (!head) { //the list is empty
-            Node *temp = new Node();
-            temp->data = _data;
-            head = temp;
-        } else { // the list is not empty
-            Node *temp = new Node();
-            temp->data = _data;
-            temp->next = head;
-            head = temp;
-
-        }
-    }
-    catch (const MyException& e){
-        throw linklistException();
-    }
-
-
-
+void LinkedList::add(void* _data, void* _location){
+        Node *temp = new (_location) Node();
+        temp->data = _data;
+        temp->next = head;
+        head = temp;
 }
+
 
 bool LinkedList::remove() throw (linklistException){
     if(!head){ //the list is empty
         return false;
     }
     else{ // the list is not empty
-        Node* temp=head;
         head = head->next;
-        try {
-            delete temp;
-        }
-        catch(const MyException& e){
-            throw linklistException();
-        }
         return true;
     }
 }
@@ -80,6 +59,10 @@ void LinkedList::toString(std::ostream &os) const{
 std::ostream &operator<<(std::ostream &os, const LinkedList &list) {
     list.toString(os);
     return os;
+}
+
+void LinkedList::setHead(void *head) {
+    LinkedList::head = (LinkedList::Node*)head;
 }
 
 //LinkedList::~LinkedList(){

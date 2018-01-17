@@ -7,7 +7,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Memory.dir/argumentException.cpp.o"
   "CMakeFiles/Memory.dir/mempoolException.cpp.o"
   "CMakeFiles/Memory.dir/linklistException.cpp.o"
-  "CMakeFiles/Memory.dir/Valgrind.cpp.o"
   "Memory.pdb"
   "Memory"
 )

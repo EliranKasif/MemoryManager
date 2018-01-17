@@ -83,16 +83,16 @@ void* MemoryManager:: newPlacment(std::size_t n)throw (linklistException){
         char* size=(char*)temp-sizeof(char); //get the address to the num of bytes to alocated
         *size=above512 ? index2 : index; //change the number of bytes to allocated
         ans=temp;
-        try {
-            freelist[index].remove();
-        }
-        catch (const MyException& e){
-            throw linklistException();
+        void* prev=freelist[index].getHead();
+        freelist[index].remove();
+        if(*size != 4) {
+            freelist[4].add(prev, prev);
         }
         return ans;
 
     }
     else if(check_if_place_pool((int)std::pow(2,above512 ? index2 : index)+sizeof(char))){
+        ++valgrind;
         ans=MemPool::getInstance()->getCurrentbrk();
         char* size=(char*)ans; // adding a "header" to the address to allocate to indicate what the sizeof the type
         *size=above512 ? index2 : index;//emplace the num of bytes to alocated
@@ -108,6 +108,11 @@ void* MemoryManager:: newPlacment(std::size_t n)throw (linklistException){
 }
 
 
+
+bool MemoryManager::check_if_place_pool(const int size){
+    return (MemPool::getInstance()->getCurrentbrk()+size <= MemPool::getInstance()->getLastbytes());
+}
+
 bool MemoryManager::check_if_in_freelist(char size){
     if(size>9){
         return freelist[9].checkifin(size);
@@ -115,22 +120,56 @@ bool MemoryManager::check_if_in_freelist(char size){
     return (bool)freelist[size].getHead();
 
 }
-bool MemoryManager::check_if_place_pool(const int size){
-    return (MemPool::getInstance()->getCurrentbrk()+size <= MemPool::getInstance()->getLastbytes());
-}
 
-void MemoryManager::deletePlacment(void* n) throw (linklistException){
-    char* size=(char*) (n - sizeof(char));
+void MemoryManager::deletePlacment(void* data) throw (linklistException){
+    char* size=(char*) (data - sizeof(char));
     char index=*size;
     if(*size>9)
     {
         index=9;
     }
-    try {
-        freelist[index].add(n);
+    if (*size==4){
+        freelist[4].add(data,data);
     }
-    catch (const MyException& e)
-    {
+    else if(check_if_in_freelist(4)){
+        void* temp=freelist[4].getHead()->data; //get the address to new placemnt
+        char* size=(char*)temp-sizeof(char); //get the address to the num of bytes to alocated
+        *size=4; //change the number of bytes to allocated
+        void* next=freelist[4].getHead()->next;
+        freelist[index].add(data,temp);
+        //freelist[4].remove();
+        freelist[4].setHead(next);
+    }
+    else if(check_if_place_pool((int)std::pow(2,4)+sizeof(char))) {
+        void *location = MemPool::getInstance()->getCurrentbrk();
+        char *header = (char *) location;
+        *header = 4;
+        location += sizeof(char);
+        freelist[index].add(data, location);
+        MemPool::getInstance()->movebrk((int) std::pow(2, 4) + sizeof(char));
+
+    }
+    else{
         throw linklistException();
     }
 }
+
+
+/*
+ *         if(check_if_in_freelist(4)){
+
+
+
+            void* temp=freelist[4].getHead()->data; //get the address to new placemnt
+            char* size=(char*)temp-sizeof(char); //get the address to the num of bytes to alocated
+            *size=4; //change the number of bytes to allocated
+            void* next=freelist[4].getHead()->next;
+            freelist[index].add(n,temp);
+            freelist[4].remove();
+            freelist[4].setHead(next);
+
+        }
+        else if (*size==4){
+            freelist[4].add(n,n);
+        }
+ */

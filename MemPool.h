@@ -38,6 +38,8 @@ public:
 
     ~MemPool();
 
+    char *getPool() const;
+
 private:
     void* lastbytes;
     char* pool;
