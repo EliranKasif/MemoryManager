@@ -17,8 +17,11 @@ MemPool* MemPool:: Mypool= nullptr;
      }
      return Mypool;
 }
-void MemPool::movebrk(const int index){
-    currentbrk += index;
+void MemPool::movebrk(int index){
+    char* temp=static_cast<char*>(currentbrk);
+    temp+=index;
+    currentbrk=static_cast<void*>(temp);
+    //currentbrk += index;
 }
 
 
@@ -38,7 +41,4 @@ void MemPool::deleteInstance(){
 MemPool::~MemPool(){
 }
 
-char *MemPool::getPool() const {
-    return pool;
-}
 

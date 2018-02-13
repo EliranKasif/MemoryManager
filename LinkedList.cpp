@@ -17,7 +17,7 @@ void LinkedList::add(void* _data, void* _location){
 }
 
 
-bool LinkedList::remove() throw (linklistException){
+bool LinkedList::remove(){
     if(!head){ //the list is empty
         return false;
     }
@@ -31,7 +31,7 @@ bool LinkedList::checkifin(char index){ // O(n) n=length of LinkedList
     bool ans=false;
     Node* temp=head;
     while(temp){
-        char* size=(char*)(temp->data - sizeof(char));//to obttain the real allocate num
+        char* size=(static_cast<char*>(temp->data) - sizeof(char));//to obttain the real allocate num
         if(*size==index){//swap between head data to temo data.
             void* data=head->data;
             head->data=temp->data;

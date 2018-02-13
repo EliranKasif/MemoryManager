@@ -73,8 +73,6 @@ MyException.h
 /home/eliran/Desktop/CPP/Memory/main.cpp
 iostream
 -
-LinkedList.h
-/home/eliran/Desktop/CPP/Memory/LinkedList.h
 argumentException.h
 /home/eliran/Desktop/CPP/Memory/argumentException.h
 MemPool.h

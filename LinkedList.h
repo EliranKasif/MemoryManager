@@ -24,17 +24,17 @@ public:
     ~LinkedList()=default;
     /*
     * @brief add new address to the Linkedlist
-     * throw exception when new is faild.
+    * @param void* _data: to point which addrres is avialbe to allocate in.
+    * @param void* _location: to point where to Placment new the Node.
     * @return void
     */
     void add(void* _data,void* _location);
 
     /*
     * @brief remove head of the LinkedList
-    * throw exception when delete is faild.
-    * @return void
+    * @return True for succsess/False for fail
     */
-    bool remove() throw (linklistException);
+    bool remove();
     /*
     * @brief check the sizeof the Object in the address of the Node
      * if find sizeof(data)==index so swap between head of list with the Node,

@@ -24,7 +24,7 @@ public:
     * @brief to move the current pointer in the MemPool to the current location of the valid address
     * @param index
     */
-    void movebrk(const int index);
+    void movebrk( int index);
     /*
     * @brief return the address of the current brk
     * @return void* currentbrk
@@ -36,9 +36,11 @@ public:
     */
     void *getLastbytes() const;
 
+    MemPool(const MemPool&) = delete;               // delete copy constructor because of Singleton
+    MemPool & operator=(const MemPool&) = delete;   // delete assignment operator because of Singleton
+
     ~MemPool();
 
-    char *getPool() const;
 
 private:
     void* lastbytes;
